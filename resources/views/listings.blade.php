@@ -1,10 +1,14 @@
+@extends('layout')
+
+@section('content')
 <h1>{{$heading}}</h1>
 
 @unless(count($listings) == 0)
 
     @foreach($listings as $listing)
 
-        <a href="/listings/{{$listing['id']}}"><h2>{{$listing['title']}}</h2></a>
+        <a href="/lis/{{$listing['id']}}"><h2>{{$listing['title']}}</h2></a>
+
 
         <p>{{$listing['description']}}</p>
 
@@ -15,3 +19,4 @@
     <p>No listings found tho.</p>
 
 @endunless
+@endsection
